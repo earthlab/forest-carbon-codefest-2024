@@ -1,19 +1,16 @@
-# Create a graphic with statistics from Monitoring Trends in Burn Severity (MTBS) perimeters
-
-Tyler L. McIntosh
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Forest Carbon Codefest data skills example
+## Create a graphic with statistics from Monitoring Trends in Burn Severity (MTBS) perimeters
 
 CU Boulder CIRES Earth Lab
 
-Last updated: 12/4/23
+However, a basic level of coding ability will be required to attend  the Forest Carbon Codefest, such that any given participant can (in the coding language of their choosing): i) open and plot tabular and geospatial data, ii) compute summary statistics or create basic statistical models, and iii) create simple data visualizations.
 
-
-This script uses the following naming conventions wherever possible:
-
- lowerCamelCase for variables
- 
- period.separated for functions
- 
- underscore_separated for files
+This markdown contains examples of a few graphics that participants would be expected to be able to create at the beginning of the Forest Carbon Codfest, as well as an example of the code used to create them.
 
 ## SETUP
 
@@ -27,7 +24,8 @@ list.of.packages <- c("tidyverse",
                       "here",
                       "mblm", #Median-based linear models (i.e. thiel-sen)
                       "tigris", #US data
-                      "scales") #add commas to ggplot axis
+                      "scales", #add commas to ggplot axis
+                      "tinytex") 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
@@ -73,10 +71,11 @@ mtbsPerimsWest <- sf::st_filter(mtbsPerims, west)
 #Plot the perimeters (could use mapview library here if wanted an interactive visual)
 tmap::tm_shape(mtbsPerimsWest) +
   tmap::tm_fill(col = "Burn_Yr") +
-  tmap::tm_layout(title = "MTBS Perimeters in the Western U.S. by Burn Year")
+  tmap::tm_layout(main.title = "MTBS Perimeters in the Western \n U.S. by Burn Year")
 
 ```
 
+\newpage
 
 ## Create summaries of MTBS data and plot
 
