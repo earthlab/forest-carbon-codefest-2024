@@ -71,7 +71,7 @@ mtbsPerimsWest <- sf::st_filter(mtbsPerims, west)
 #Plot the perimeters (could use mapview library here if wanted an interactive visual)
 tmap::tm_shape(mtbsPerimsWest) +
   tmap::tm_fill(col = "Burn_Yr") +
-  tmap::tm_layout(main.title = "MTBS Perimeters in the Western \n U.S. by Burn Year")
+  tmap::tm_layout(main.title = "MTBS Perimeters in the \nWestern U.S. by Burn Year")
 
 ```
 
