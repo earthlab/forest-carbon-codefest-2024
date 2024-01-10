@@ -1,3 +1,5 @@
+![Forest pixel banner](../assets/ForestBanner_NASA_Imagery.png)
+
 # Forest Carbon CodeFest
 
 March 12-14, 2024
