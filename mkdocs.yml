@@ -14,7 +14,7 @@ copyright: 'Copyright &copy; 2024 University of Colorado Boulder'
 nav:
   - Home: index.md
   - Data Library:
-    - GEDI: gedi.md
+      - GEDI: gedi.md
 
 # Configuration
 theme:
