@@ -1,7 +1,7 @@
 site_name: 'Forest Carbon Codefest'
 site_description: 'Website for the 2024 Forest Carbon Codefest'
 site_author: Tyler McIntosh
-site_url:  earthlab.github.io/Forest_Carbon_Codefest
+site_url:  https://earthlab.github.io/forest-carbon-codefest-2024
 
 # Repository
 repo_name: forest-carbon-codefest-2024
